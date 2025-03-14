@@ -6,7 +6,9 @@ public class InputManager : Singleton<InputManager>
     PlayerControls playerControls; 
     PlayerInput playerInput; 
 
-    public Vector2 InputVector { get; private set; }
+    public Vector2 MovementInputVector { get; private set; }
+
+    public Vector2 CameraInputVector { get; private set; }
 
     private void Awake()
     {
@@ -26,12 +28,13 @@ public class InputManager : Singleton<InputManager>
 
     private void Update()
     {
-        InputVector = playerControls.PlayerMovement.Movement.ReadValue<Vector2>();
+        MovementInputVector = playerControls.PlayerMovement.Movement.ReadValue<Vector2>();
+        CameraInputVector = playerControls.CameraMovement.CameraRotate.ReadValue<Vector2>();
         
     }
 
     private void Movement_Performed(InputAction.CallbackContext context)
     {
-        Debug.Log(context); 
+        //Debug.Log(context); 
     }
 }
