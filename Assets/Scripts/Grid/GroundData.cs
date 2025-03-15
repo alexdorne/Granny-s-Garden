@@ -11,7 +11,8 @@ public class GroundData : ScriptableObject
     {
         Soil,
         Sand,
-        Rocks
+        Rocks,
+        Water
     }
 
 }
