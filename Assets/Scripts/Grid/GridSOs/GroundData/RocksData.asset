@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RocksData
   m_EditorClassIdentifier: 
   tileName: Rocks
-  tilePrefab: {fileID: 0}
+  tilePrefab: {fileID: 6939275919561269757, guid: 8cabe0299f5374e4dba17bcfe46ef747, type: 3}
   groundType: 2

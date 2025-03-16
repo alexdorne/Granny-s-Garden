@@ -6,11 +6,14 @@ public class GridManager : Singleton<GridManager>
     [SerializeField] int gridWidth; 
     [SerializeField] int gridDepth;
 
-    Tile[,] tiles = new Tile[10,10];  
+    public Tile[,] tiles { get; private set; }  
 
     private void Awake()
     {
+        tiles = new Tile[10,10]; 
+
         GenerateGrid();
+
     }
 
     private void GenerateGrid()
@@ -21,6 +24,11 @@ public class GridManager : Singleton<GridManager>
             {
                 var spawnedTile = Instantiate(tile, new Vector3(x + 0.5f, -0.05f, z + 0.5f), Quaternion.identity);
                 tiles[x,z] = spawnedTile.GetComponent<Tile>();
+                
+                Tile tileScript = spawnedTile.GetComponent<Tile>(); 
+
+                tileScript.TileXPos = x;
+                tileScript.TileZPos = z;
             }
         }
     }

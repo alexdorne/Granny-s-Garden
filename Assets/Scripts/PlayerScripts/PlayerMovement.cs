@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         inputManager = InputManager.Instance; 
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>(); 
         
     }
 
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 moveDirection = ( inputManager.MovementInputVector.x * right + inputManager.MovementInputVector.y * forward ).normalized; 
 
-        Debug.Log(moveDirection.magnitude); 
+        //Debug.Log(moveDirection.magnitude); 
 
         animator.SetFloat("Speed", moveDirection.magnitude);
 
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movementDirection = rb.linearVelocity; 
 
-        Debug.Log(movementDirection.magnitude); 
+        //Debug.Log(movementDirection.magnitude); 
 
         Quaternion lookRotation; 
          

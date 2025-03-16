@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SoilData
   m_EditorClassIdentifier: 
   tileName: Soil
-  tilePrefab: {fileID: 0}
+  tilePrefab: {fileID: 4130536974322080474, guid: 88f7de7ab5ac64f4d9bdfc78551705b7, type: 3}
   groundType: 0
